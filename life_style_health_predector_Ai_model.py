@@ -66,18 +66,21 @@ final = algo.predict([[
 ]])
 print( final)
 
-decode = label.inverse_transform([final[0][3]])[0]
-    
 label.fit(file["Heart_Disease_Risk"])
 decode = label.inverse_transform([final[0][0]])[0]
 print("heart_desease_risk", decode)
+
 label.fit(file["Diabetes_Risk"])
 decodes = label.inverse_transform([final[0][1]])[0]
 print("diabetes_risk:",decodes)
-label.fit(file["Diabetes_Risk"])
+
+label.fit(file["Health_Risk"])
 decodess = label.inverse_transform([final[0][2]])[0]
-print("Diabetes_Risk",decodess)
+print("Health_Risk",decodess)
+
 label.fit(file["Diet_Recommendation"])
-decodesss = label.inverse_transform([final[0][2]])[0]
+decodesss = label.inverse_transform([final[0][3]])[0]
 print("diet_recommend:" , decodesss)
+#done finaly time to watch reels 
+
 #done finaly time to watch reels 
